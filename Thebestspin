@@ -19,20 +19,20 @@ Credits = [[
 ]]
 
 function GetHttp(URL)
-	local returning = nil
-    repeat
-        pcall(function()
-            returning = game:HttpGet(URL,true)
-        end)
-        if returning == nil then
-            warn("Failed to get "..URL)
-            wait(0.5)
-        end
-    until returning ~= nil
-	return returning
-end
-
-got = GetHttp("https://gist.githubusercontent.com/TechyBrain/0cae69c69880daa4355e3c3a46191ae4/raw")
-loadstring(got)()
+●        local returning = nil
+●    repeat
+●        pcall(function()
+●            returning = game:HttpGet(URL,true)
+●        end)
+●        if returning == nil then
+●            warn("Failed to get "..URL)
+●            wait(0.5)
+●        end
+●    until returning ~= nil
+●        return returning
+●end
+●
+●got = GetHttp("https://gist.githubusercontent.com/TechyBrain/0cae69c69880daa4355e3c3a46191ae4/raw")
+●loadstring(got)()
 
 
