@@ -1,0 +1,41 @@
+
+local UIS = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local good = "You're Whitelisted"
+local bad = "You're Blacklisted"
+
+-- Whitelist [Allowed]
+_G.whitelisted = {
+    [111] = "Username", 
+    [111] = "Username",
+    [111] = "Username"
+}
+
+
+
+_G.blacklisted = {
+    [001] = "Username"
+}
+
+
+function giveAccess(player)
+    for i, v in next, _G.whitelisted do
+        if i == player.UserId then
+        -- code here
+    end
+end
+giveAccess(player)
+
+
+
+function blacklist(player)
+    for i,v in next, _G.blacklisted do
+        if i == player.UserId then
+            player:Kick(bad)
+            break
+        end
+    end
+end
+
+
+blacklist(player)
