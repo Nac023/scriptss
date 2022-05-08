@@ -1,0 +1,175 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("flopa made by ","Sentinel")
+
+local Tab = Window:NewTab("auto farm")
+
+local Section = Tab:NewSection("flopa cool")
+
+Section:NewButton("auto money", "rich", function()
+
+    _G.autoTap = true
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autoTap == true do
+
+            for i,v in pairs(game:GetService("Workspace").Floppa:GetChildren()) do
+
+    if v.ClassName == "ClickDetector" then
+
+        fireclickdetector(v)
+
+    end
+
+end
+
+wait()
+
+end
+
+end)
+
+end)
+
+Section:NewButton("stop the autofarm", "no rich", function()
+
+    _G.autoTap = false
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autoTap == true do
+
+            for i,v in pairs(game:GetService("Workspace").Floppa:GetChildren()) do
+
+    if v.ClassName == "ClickDetector" then
+
+        fireclickdetector(v)
+
+    end
+
+end
+
+wait()
+
+end
+
+end)
+
+end)
+
+Section:NewButton("auto collect(read desc)", "sometimes it bug so execute again", function()
+
+    _G.autotp = true
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autotp == true do
+
+            function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Money.CFrame)
+
+wait(0.5)
+
+end
+
+end)
+
+end)
+
+Section:NewButton("disable auto tp", "ok", function()
+
+    _G.autotp = false
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autotp == true do
+
+            function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Money.CFrame)
+
+wait(0.5)
+
+end
+
+end)
+
+end)
+
+local Tab1 = Window:NewTab("teleports")
+
+local Section1 = Tab1:NewSection("teleport pls")
+
+Section1:NewButton("Backrooms", "scary", function()
+
+    function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Backrooms.Exit.Frame.CFrame)
+
+end)
+
+Section1:NewButton("house", "run from backrooms", function()
+
+    function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").HomeTeleport.CFrame)
+
+end)
