@@ -1,0 +1,189 @@
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/modern"))()
+
+local Tab = Lib:Tab("flopa v2")
+
+Tab:Button("autofarm", function()
+
+    _G.autoTap = true
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autoTap == true do
+
+            for i,v in pairs(game:GetService("Workspace").Floppa:GetChildren()) do
+
+    if v.ClassName == "ClickDetector" then
+
+        fireclickdetector(v)
+
+    end
+
+end
+
+wait()
+
+end
+
+end)
+
+end)
+
+Tab:Button("stop autofarm", function()
+
+    _G.autoTap = false
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autoTap == true do
+
+            for i,v in pairs(game:GetService("Workspace").Floppa:GetChildren()) do
+
+    if v.ClassName == "ClickDetector" then
+
+        fireclickdetector(v)
+
+    end
+
+end
+
+wait()
+
+end
+
+end)
+
+end)
+
+Tab:Button("auto collect", function()
+
+    _G.autotp = true
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autotp == true do
+
+            function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Money.CFrame)
+
+wait(0.5)
+
+end
+
+end)
+
+end)
+
+Tab:Button("disable autotp", function()
+
+    _G.autotp = false
+
+    
+
+    
+
+    spawn(function()
+
+        while _G.autotp == true do
+
+            function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Money.CFrame)
+
+wait(0.5)
+
+end
+
+end)
+
+end)
+
+local Tab1 = Lib:Tab("tp")
+
+Tab1:Button("backrooms", function()
+
+    function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").Backrooms.Exit.Frame.CFrame)
+
+end)
+
+Tab1:Button("house", function()
+
+    function teleportTO(placeCFrame)
+
+    local plyr = game.Players.LocalPlayer;
+
+    if plyr.Character then
+
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    end
+
+end
+
+teleportTO(game:GetService("Workspace").HomeTeleport.CFrame)
+
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+
+    Title = "Script made by real dummy#6666";
+
+    Text = "real dummy#6666";
+
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+
+Duration = 16;
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+
+    Title = "Notify";
+
+    Text = "Loaded";
+
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+
+Duration = 16;
